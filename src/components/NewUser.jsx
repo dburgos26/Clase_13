@@ -8,6 +8,8 @@ export default function NewUser( {crearUsuario} ){
 
     // Test
 
+    // test 2
+
     const submit = (e) => {
 
         console.log(nombre,correo)
