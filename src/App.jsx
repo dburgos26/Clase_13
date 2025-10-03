@@ -13,6 +13,7 @@ function App() {
     { id: 2, nombre: 'Carlos López', correo: 'carlos@email.com' },
     { id: 3, nombre: 'María Silva', correo: 'maria@email.com' },
     { id: 4, nombre: 'Juan', correo: 'juan@email.com' },
+    { id: 5, nombre: 'David', correo: 'David@email.com' },
   ]);
 
   const crearUsuario = ({ nombre, correo }) => {

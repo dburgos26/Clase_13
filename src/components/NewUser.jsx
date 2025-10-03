@@ -6,6 +6,8 @@ export default function NewUser( {crearUsuario} ){
     const [nombre, setNombre] = useState("")
     const [correo, setCorreo] = useState("")
 
+    // Test
+
     const submit = (e) => {
 
         console.log(nombre,correo)
