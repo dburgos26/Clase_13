@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import "./App.css"
 
-import Header from "./components/header"
+import Header from "./components/Header"
 import { BrowserRouter, Routes, Route } from 'react-router';
 import Home from './components/Home';
 import NewUser from './components/NewUser';
