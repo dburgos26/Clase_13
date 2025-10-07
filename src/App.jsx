@@ -46,7 +46,7 @@ function App() {
 
       <Routes>
 
-        <Route path="/" element={<Home usuarios={usuarios} borrarUsuario={borrarUsuario} />} /> 
+        <Route path="/" element={<Home />} /> 
         <Route path="/crear" element={ <NewUser crearUsuario={crearUsuario} /> } /> 
         <Route path="/editar/:id" element={ <EditUser usuarios={usuarios} actualizarUsuario={actualizarUsuario}/>} />
 
