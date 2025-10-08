@@ -11,7 +11,7 @@ export default function Header(){
             <div className="hdr__inner">
 
                 <NavLink to="/" className="brand">
-                    Usuarios
+                    Usuarios - Homepage
                 </NavLink>
 
                 <nav className="nav">
