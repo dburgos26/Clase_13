@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./App.css"
 
 import Header from "./components/Header"
@@ -7,16 +7,22 @@ import Home from './components/Home';
 import NewUser from './components/NewUser';
 import EditUser from './components/EditUser';
 
+import supabase from './utils/supabase';
+
 function App() {
-  const [usuarios, setUsuarios] = useState([
-    { id: 1, nombre: 'Ana García', correo: 'ana@email.com' },
-    { id: 2, nombre: 'Carlos López', correo: 'carlos@email.com' },
-    { id: 3, nombre: 'María Silva', correo: 'maria@email.com' },
-    { id: 4, nombre: 'Juan', correo: 'juan@email.com' },
-    { id: 5, nombre: 'David', correo: 'David@email.com' },
-    { id: 6, nombre: 'test', correo: 'Test@email.com' },
-    { id: 7, nombre: 'test2', correo: 'Test2@email.com' },
-  ]);
+  const [usuarios, setUsuarios] = useState([]);
+
+  useEffect(() => {
+
+    async function getUsuarios() {
+      const { data } = await supabase.from("people").select()
+
+      setUsuarios(data)
+    }
+
+    getUsuarios()
+
+  }, [])
 
   const crearUsuario = ({ nombre, correo }) => {
 
